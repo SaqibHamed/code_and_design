@@ -10,6 +10,10 @@ function setup() {
 
 function draw() {
 
+
+//-------------------------------------------------------------------
+
+
   //let inputValue = mouseX; //Part1
   let inputValue = valueSlider.value();
   
@@ -24,7 +28,9 @@ function draw() {
   let outputValue = map(inputValue, inputMin, inputMax, outputMin, outputMax);
   //console.log(outputValue);
 
+
 //-------------------------------------------------------------------
+
 
   let input2Value = strokeSlider.value();
   
@@ -39,6 +45,8 @@ function draw() {
   let output2Value = map(input2Value, input2Min, input2Max, output2Min, output2Max);
   //console.log(outputValue);
 
+
+//-------------------------------------------------------------------
 
 
   stroke("red");

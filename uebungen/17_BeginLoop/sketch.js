@@ -1,11 +1,11 @@
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-
+  background(0, 50);
 }
 
 function draw() {
-  background(0, 50);
+  
   noFill();
   stroke(255);
 
@@ -15,7 +15,21 @@ function draw() {
   //Welche Werte verändern sich?
 
   for (let i=0; i<10; i++){
-    console.log(i);
-    ellipse(i * 200, height / 2, 200, 200);
+    
+    let distanz = dist (mouseX, mouseY, i*200, height/2);
+    let yPos = map (distanz, 0, width, -300, 300);
+    ellipse(i * 200, height / 2-yPos, 200, 200);
+    if (i%4==0){
+      stroke("green");
+    }
+    else{
+      stroke("purple");
+    }
 }
+//ich benötige eine rote ellipse die in der mitte spawnt und sich zur maus hin bewegt
+  let distanz = dist (mouseX, mouseY, width/2, height/2);
+  let diameter = map (distanz, 0, width, 500, 90);
+  stroke("red");
+  strokeWeight(5);
+ellipse(width/2, height/2, diameter);
 }

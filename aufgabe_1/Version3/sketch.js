@@ -51,3 +51,9 @@ function draw() {
   // 🔸 Kreis wird basierend auf Slider verschoben
   ellipse(x, y, smoothDiam);
 }
+
+function keyPressed() {
+  if (key == 's') {
+    saveCanvas('meinBild.png');
+  }
+}

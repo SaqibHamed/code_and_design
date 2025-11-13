@@ -25,10 +25,10 @@ function setup() {
 function draw() {
   background(220, 40);  // Weisser Hintergrund  mit Fade-Effekt
 
-  // Mittelpunkt als Ursprung
+  // Mittelpunkt ist der Ursprung (Nullpunkt)
   translate(width / 2, height / 2);
 
-  // Maus ebenfalls relativ zur Mitte
+  // Maus position zur Mitte
   let mx = mouseX - width / 2;
   let my = mouseY - height / 2;
 

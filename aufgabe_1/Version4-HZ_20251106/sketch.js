@@ -57,7 +57,7 @@ function draw() {
   vol = lerp(preVol, vol, 0.8);
 
   //console.log(vol);
-  let diam = map(vol, 0.0, 0.01, 0, 2000);
+  let diam = map(vol, 0.0, 0.01, 0, 500);
 
   //smoothDiam = lerp(smoothDiam, diam, 0.08);
 

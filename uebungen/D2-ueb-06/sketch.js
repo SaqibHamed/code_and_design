@@ -12,27 +12,15 @@ function setup() {
 }
 
 function draw() {
-  let ratio = width / bild.width;
-  image(bild,0,0,bild.width*ratio,bild.height*ratio);
+  background(220);
 
   push();
-  //Rechteck 1
-    translate(width/2+100, height/2);
-    rotate(drehwinkel);
-    fill(0,0,255);
-    rect (0, 0, 200, 200);
+    translate(width / 2, height / 2);
+    rotate(radians(drehwinkel));
+
+    fill(0, 0, 255);
+    rect(150, 0, 100, 100); // 150px Orbit-Radius
   pop();
 
-  push();
-  //Rechteck 2
-    translate(width/2-100, height/2);
-    rotate(drehwinkel*-1);
-    fill(0,0,255);
-    rect (0, 0, 200, 200);
-  pop();
-
-  fill(255,0,0);
-  rect(0, 0, 200, 200); 
-
-  drehwinkel = drehwinkel +1;
+  drehwinkel += 1;
 }
